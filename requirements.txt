@@ -1,0 +1,4 @@
+beautifulsoup4==4.12.3
+Flask==3.0.2
+Flask_Caching==2.1.0
+Requests==2.31.0
