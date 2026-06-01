@@ -74,7 +74,7 @@ Returns popular drama items from:
 
 ```json
 {
-  "page": "recent",
+  "page": "popular",
   "currentPage": "1",
   "status": 200,
   "error": null,
@@ -104,7 +104,7 @@ Returns recently added drama items from:
 
 ```json
 {
-  "page": "popular",
+  "page": "recent",
   "status": 200,
   "error": null,
   "results": [
