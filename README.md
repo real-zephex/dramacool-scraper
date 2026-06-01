@@ -6,15 +6,15 @@ A lightweight Flask API that scrapes drama listings from `asianc.to` and returns
 
 Project structure:
 
-- `/tmp/workspace/real-zephex/dramacool-scraper/main.py`  
+- `main.py`  
   Flask app entrypoint, route definitions, and response caching.
-- `/tmp/workspace/real-zephex/dramacool-scraper/src/popular.py`  
+- `src/popular.py`  
   Scraper for most-popular drama pages.
-- `/tmp/workspace/real-zephex/dramacool-scraper/src/recent.py`  
+- `src/recent.py`  
   Scraper for recently-added dramas.
-- `/tmp/workspace/real-zephex/dramacool-scraper/requirements.txt`  
+- `requirements.txt`  
   Python dependencies.
-- `/tmp/workspace/real-zephex/dramacool-scraper/vercel.json`  
+- `vercel.json`  
   Vercel deployment configuration.
 
 ## Tech stack
@@ -74,7 +74,7 @@ Returns popular drama items from:
 
 ```json
 {
-  "page": "popular",
+  "page": "recent",
   "currentPage": "1",
   "status": 200,
   "error": null,
@@ -121,7 +121,7 @@ Returns recently added drama items from:
 
 - Endpoint response is cached for 300 seconds.
 - On request/scrape failure, `error` is populated and `results` may be empty.
-- `page` is currently returned as `"popular"` by the implementation in `src/recent.py`.
+- Note: current implementation in `src/recent.py` sets `page` to `"popular"`, which may differ from the expected `"recent"` label.
 
 ## Deployment
 
