@@ -50,11 +50,11 @@ Base URL (local): `http://127.0.0.1:5000`
 
 Health/welcome endpoint.
 
-**Response**
+**Example response**
 
 ```json
 {
-  "message": "Welcome. This scrapers scrapes the list of popular kdramas from dramacool"
+  "message": "Welcome message"
 }
 ```
 
@@ -121,8 +121,8 @@ Returns recently added drama items from:
 
 - Endpoint response is cached for 300 seconds.
 - On request/scrape failure, `error` is populated and `results` may be empty.
+- `page` is currently returned as `"popular"` by the implementation in `src/recent.py`.
 
 ## Deployment
 
 `vercel.json` is configured to serve `main.py` via `@vercel/python`, routing all paths to the Flask app.
-
